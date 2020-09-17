@@ -8,9 +8,59 @@
 </head>
 
 <body>
-    <h1>Hello2</h1>
-    <img src="./assets/emoji.png" alt="emoji">
-
+    <div id="app">
+        <div class="person-type-controls">
+            <!--  -->
+            <div>
+                <input type="radio" id="person-normal" name="person" value="person-normal">
+                <label for="person-normal">Normal</label>
+            </div>
+            <!--  -->
+            <!--  -->
+            <div>
+                <input type="radio" id="person-diabetic" name="person" value="person-diabetic">
+                <label for="person-diabetic">Diabetic</label>
+            </div>
+            <!--  -->
+        </div>
+        <div class="charts">
+            <div class="charts__bloodsugar">
+                <canvas id="bloodsugar"></canvas>
+            </div>
+            <div class="charts__insulin">
+                <!-- <canvas id="insulin"></canvas> -->
+            </div>
+        </div>
+        <div id="controls" class="controls">
+            <div class="controls__foods">
+                <!--  -->
+                <div>
+                    <input type="checkbox" id="input-bread" name="input-bread">
+                    <label for="input-bread">Bread</label>
+                </div>
+                <!--  -->
+                <!--  -->
+                <div>
+                    <input type="checkbox" id="input-rice" name="input-rice">
+                    <label for="input-rice">Rice</label>
+                </div>
+                <!--  -->
+                <!--  -->
+                <div>
+                    <input type="checkbox" id="input-glucose" name="input-glucose">
+                    <label for="input-glucose">Glucose</label>
+                </div>
+                <!--  -->
+                <!--  -->
+                <div>
+                    <input type="checkbox" id="input-cola" name="input-cola">
+                    <label for="input-cola">Cola</label>
+                </div>
+                <!--  -->
+            </div>
+            <div class="controls__fitness"></div>
+        </div>
+    </div>
 </body>
 
 </html>

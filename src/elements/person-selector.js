@@ -1,0 +1,1 @@
+export const el_personSelector = document.querySelector('.person-type-controls');
