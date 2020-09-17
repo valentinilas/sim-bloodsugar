@@ -10,6 +10,9 @@ export const renderChart = (ctx, data) => {
 
     var chart = new Chart(ctx, {
         type: 'line',
+        legendCallback: function(chart) {
+            '<span>lol</span>'
+        },
         data: {
             labels: data.timeScale,
             fontColor: "#fff",
@@ -45,6 +48,7 @@ export const renderChart = (ctx, data) => {
         },
         options: bloodSugarChartOptions
     });
+
 
     store.bloodSugarChart = chart;
 };
