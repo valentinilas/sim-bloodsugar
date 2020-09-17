@@ -9,6 +9,7 @@ export default {
     legend: {
         position: 'bottom',
         // align: 'start',
+        display: false,
 
         labels: {
             fontColor: '#fff',
