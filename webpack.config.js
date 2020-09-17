@@ -1,4 +1,6 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 
 const path = require('path');
 
@@ -16,12 +18,14 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
+                    MiniCssExtractPlugin.loader,
                     // Creates `style` nodes from JS strings
-                    'style-loader',
+                    // 'style-loader',
                     // Translates CSS into CommonJS
                     'css-loader',
                     // Compiles Sass to CSS
                     'sass-loader',
+
                 ],
             },
             {
@@ -43,7 +47,12 @@ module.exports = {
         ],
     },
     plugins: [new HtmlWebpackPlugin({
-        template: './src/index.html',
-        filename: './index.html'
-    })]
+            template: './src/index.html',
+            filename: './index.html'
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+            chunkFilename: '[id].css'
+        })
+    ]
 };
