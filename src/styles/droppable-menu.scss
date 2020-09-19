@@ -35,8 +35,10 @@
     .item {
         width: 100px;
         height: 100px;
-        background-color: red;
+        background-color: lightgreen;
+        padding: 15px;
         user-select: none;
+        opacity: 0.5;
         &:hover {
             cursor: grab;
         }

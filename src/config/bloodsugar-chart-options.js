@@ -31,7 +31,7 @@ export default {
         yAxes: [{
             ticks: {
                 beginAtZero: true,
-                fontColor: '#fff',
+                fontColor: chartColors.BloodSugarLevel,
                 stepSize: 5,
                 min: 0,
                 max: 20,
