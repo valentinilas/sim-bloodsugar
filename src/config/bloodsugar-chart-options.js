@@ -19,6 +19,14 @@ export default {
             usePointStyle: true
         }
     },
+    layout: {
+        padding: {
+            left: 10,
+            right: 20,
+            top: 10,
+            bottom: 10
+        }
+    },
     scales: {
         yAxes: [{
             ticks: {
