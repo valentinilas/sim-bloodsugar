@@ -10,33 +10,37 @@
 <body>
     <div id="app">
         <div class="app-content">
-            <div class="person-type-controls">
-                <!--  -->
-                <div>
+            <div class="top-controls">
+
+
+                <div class="person-type-controls">
+                    <!--  -->
+
                     <input type="radio" id="person-normal" name="person" value="person-normal" checked>
-                    <label for="person-normal">Normal</label>
-                </div>
-                <!--  -->
-                <!--  -->
-                <div>
+                    <label class="btn" for="person-normal">Normal</label>
+
+                    <!--  -->
+                    <!--  -->
+
                     <input type="radio" id="person-diabetic" name="person" value="person-diabetic">
-                    <label for="person-diabetic">Diabetic</label>
+                    <label class="btn" for="person-diabetic">Diabetic</label>
+
+                    <!--  -->
                 </div>
-                <!--  -->
-            </div>
-            <div class="person-fitness-level-controls">
-                <!--  -->
-                <div>
+                <div class="person-fitness-level-controls">
+                    <!--  -->
+
                     <input type="radio" id="person-fit" name="person-fitness" value="person-fit">
-                    <label for="person-fit">Fit</label>
-                </div>
-                <!--  -->
-                <!--  -->
-                <div>
+                    <label class="btn" for="person-fit">Fit</label>
+
+                    <!--  -->
+                    <!--  -->
+
                     <input type="radio" id="person-not-fit" name="person-fitness" value="person-not-fit" checked>
-                    <label for="person-not-fit">Not fit</label>
+                    <label class="btn" for="person-not-fit">Not fit</label>
+
+                    <!--  -->
                 </div>
-                <!--  -->
             </div>
             <div class="charts">
                 <div class="charts__bloodsugar">
@@ -49,28 +53,28 @@
             <div id="controls" class="controls">
                 <div class="controls__foods">
                     <!--  -->
-                    <div>
-                        <input type="radio" id="input-bread" name="inputs-food" value="2" data-name="Bread" checked>
-                        <label for="input-bread">Bread</label>
-                    </div>
+
+                    <input type="radio" id="input-bread" name="inputs-food" value="2" data-name="Bread">
+                    <label class="btn" for="input-bread">Bread</label>
+
                     <!--  -->
                     <!--  -->
-                    <div>
-                        <input type="radio" id="input-rice" name="inputs-food" data-name="Rice" value="0">
-                        <label for="input-rice">Rice</label>
-                    </div>
+
+                    <input type="radio" id="input-rice" name="inputs-food" data-name="Rice" value="0">
+                    <label class="btn" for="input-rice">Rice</label>
+
                     <!--  -->
                     <!--  -->
-                    <div>
-                        <input type="radio" id="input-glucose" name="inputs-food" data-name="Glucose" value="3">
-                        <label for="input-glucose">Glucose</label>
-                    </div>
+
+                    <input type="radio" id="input-glucose" name="inputs-food" data-name="Glucose" value="3">
+                    <label class="btn" for="input-glucose">Glucose</label>
+
                     <!--  -->
                     <!--  -->
-                    <div>
-                        <input type="radio" id="input-cola" name="inputs-food" data-name="Cola" value="1">
-                        <label for="input-cola">Cola</label>
-                    </div>
+
+                    <input type="radio" id="input-cola" name="inputs-food" data-name="Cola" value="1" checked>
+                    <label class="btn" for="input-cola">Cola</label>
+
                     <!--  -->
                 </div>
                 <div class="controls__fitness"></div>
