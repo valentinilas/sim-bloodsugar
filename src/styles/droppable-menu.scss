@@ -1,0 +1,51 @@
+.draggable-is-dragging .item:hover {
+    cursor: grabbing;
+}
+
+.foods-container {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    .item {
+        width: 96px;
+        height: 96px;
+        background-color: #fff;
+        box-shadow: 0 5px 3px rgba(0, 0, 0, 0.4);
+        padding: 15px;
+        user-select: none;
+        &:hover {
+            cursor: grab;
+        }
+    }
+    .dropzone {
+        width: 100px;
+        height: 100px;
+        background-color: #f5f5f5;
+        border: 2px dashed #dedede;
+        margin: 5px;
+    }
+}
+
+.dropzone-container {
+    border: 2px dashed #000;
+    padding: 5px;
+    width: 110px;
+    .item {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        user-select: none;
+        &:hover {
+            cursor: grab;
+        }
+    }
+    .dropzone {
+        height: 100px;
+    }
+}
+
+.draggable-dropzone--occupied {
+    background: lightgreen;
+}

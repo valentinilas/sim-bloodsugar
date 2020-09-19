@@ -30,7 +30,8 @@ export const updateInsulinChart = (chart, data, foodType, fit) => {
                     label: foodTypes[foodType + 'BloodLevel'],
                     borderColor: chartColors[foodType],
                     backgroundColor: chartColors[foodType],
-                    fill: true
+                    fill: true,
+                    yAxisID: 'A'
                 },
                 {
                     data: insulinLevels,
@@ -38,6 +39,7 @@ export const updateInsulinChart = (chart, data, foodType, fit) => {
                     borderColor: chartColors.InsulinLevel,
                     backgroundColor: chartColors.InsulinLevel,
                     fill: true,
+                    yAxisID: 'B'
                 }
 
             ]

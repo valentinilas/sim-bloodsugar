@@ -34,9 +34,9 @@ export default {
                 ticks: {
                     beginAtZero: true,
                     fontColor: chartColors.BloodSugarLevel,
-                    stepSize: 40,
+                    stepSize: 5,
                     min: 0,
-                    max: 160,
+                    max: 20,
                     padding: 15
                 },
                 scaleLabel: {
@@ -51,7 +51,7 @@ export default {
                     fontColor: chartColors.InsulinLevel,
                     stepSize: 40,
                     min: 0,
-                    max: 160,
+                    max: 200,
                     padding: 15
                 },
                 gridLines: false,
