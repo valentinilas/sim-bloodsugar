@@ -4,5 +4,5 @@ export default {
     Bread: '#49b2ad',
     Glucose: '#49b2ad',
     InsulinLevel: '#ffd100',
-    BloodSugarLevel: '#C0564A'
+    BloodSugarLevel: '#f26d5e'
 }
