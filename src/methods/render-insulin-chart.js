@@ -33,16 +33,18 @@ export const rederInsulinChart = (ctx, data, foodType) => {
                     data: data[foodType],
                     label: foodTypes[foodType + 'BloodLevel'],
                     borderColor: chartColors[foodType],
-                    // backgroundColor: chartColors.Rice,
+                    backgroundColor: chartColors[foodType],
                     fill: true,
-                    // pointRadius: 0,
+                    yAxisID: 'A'
+                        // pointRadius: 0,
                 },
                 {
                     data: insulinLevels,
                     label: insulinTypes.levelLabel,
                     borderColor: chartColors.InsulinLevel,
-                    // backgroundColor: chartColors.Rice,
+                    backgroundColor: chartColors.InsulinLevel,
                     fill: true,
+                    yAxisID: 'B'
                 }
 
             ]
