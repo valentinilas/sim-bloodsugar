@@ -9,56 +9,76 @@
 
 <body>
     <div id="app">
-        <div class="person-type-controls">
-            <!--  -->
-            <div>
-                <input type="radio" id="person-normal" name="person" value="person-normal" checked>
-                <label for="person-normal">Normal</label>
+        <div class="app-content">
+            <div class="person-type-controls">
+                <!--  -->
+                <div>
+                    <input type="radio" id="person-normal" name="person" value="person-normal" checked>
+                    <label for="person-normal">Normal</label>
+                </div>
+                <!--  -->
+                <!--  -->
+                <div>
+                    <input type="radio" id="person-diabetic" name="person" value="person-diabetic">
+                    <label for="person-diabetic">Diabetic</label>
+                </div>
+                <!--  -->
             </div>
-            <!--  -->
-            <!--  -->
-            <div>
-                <input type="radio" id="person-diabetic" name="person" value="person-diabetic">
-                <label for="person-diabetic">Diabetic</label>
+            <div class="person-fitness-level-controls">
+                <!--  -->
+                <div>
+                    <input type="radio" id="person-fit" name="person-fitness" value="person-fit" checked>
+                    <label for="person-fit">Fit</label>
+                </div>
+                <!--  -->
+                <!--  -->
+                <div>
+                    <input type="radio" id="person-not-fit" name="person-fitness" value="person-not-fit">
+                    <label for="person-not-fit">Not fit</label>
+                </div>
+                <!--  -->
             </div>
-            <!--  -->
+            <div class="charts">
+                <div class="charts__bloodsugar">
+                    <canvas id="chart-blood-sugar"></canvas>
+                </div>
+                <div class="charts__insulin">
+                    <canvas id="chart-insulin"></canvas>
+                </div>
+            </div>
+            <div id="controls" class="controls">
+                <div class="controls__foods">
+                    <!--  -->
+                    <div>
+                        <input type="radio" id="input-bread" name="inputs-food" value="2" data-name="Bread" checked>
+                        <label for="input-bread">Bread</label>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <div>
+                        <input type="radio" id="input-rice" name="inputs-food" data-name="Rice" value="0">
+                        <label for="input-rice">Rice</label>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <div>
+                        <input type="radio" id="input-glucose" name="inputs-food" data-name="Glucose" value="3">
+                        <label for="input-glucose">Glucose</label>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <div>
+                        <input type="radio" id="input-cola" name="inputs-food" data-name="Cola" value="1">
+                        <label for="input-cola">Cola</label>
+                    </div>
+                    <!--  -->
+                </div>
+                <div class="controls__fitness"></div>
+            </div>
         </div>
-        <div class="charts">
-            <div class="charts__bloodsugar">
-                <canvas id="bloodsugar"></canvas>
-            </div>
-            <div class="charts__insulin">
-                <!-- <canvas id="insulin"></canvas> -->
-            </div>
-        </div>
-        <div id="controls" class="controls">
-            <div class="controls__foods">
-                <!--  -->
-                <div>
-                    <input type="checkbox" id="input-bread" name="input-bread" value="2" checked>
-                    <label for="input-bread">Bread</label>
-                </div>
-                <!--  -->
-                <!--  -->
-                <div>
-                    <input type="checkbox" id="input-rice" name="input-rice" value="0" checked>
-                    <label for="input-rice">Rice</label>
-                </div>
-                <!--  -->
-                <!--  -->
-                <div>
-                    <input type="checkbox" id="input-glucose" name="input-glucose" value="3" checked>
-                    <label for="input-glucose">Glucose</label>
-                </div>
-                <!--  -->
-                <!--  -->
-                <div>
-                    <input type="checkbox" id="input-cola" name="input-cola" value="1" checked>
-                    <label for="input-cola">Cola</label>
-                </div>
-                <!--  -->
-            </div>
-            <div class="controls__fitness"></div>
+
+        <div class="app-background">
+            <img src="./assets/background.jpg" alt="app background">
         </div>
     </div>
 </body>

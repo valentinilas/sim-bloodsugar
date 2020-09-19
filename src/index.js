@@ -1,12 +1,16 @@
 import './styles/main.scss'
-import { renderChart } from './methods/render-chart';
+import { renderBloodSugarChart } from './methods/render-blood-sugar-chart';
+import { rederInsulinChart } from './methods/render-insulin-chart';
 import store from './store/store';
-import { attachPersonSelectorEvents } from './events/person-change-event';
-import { attachFoodTypeSelectorEvents } from './events/food-type-change-event';
+import { attachPersonSelectorEvents } from './events/event-person-type-change';
+import { attachFoodTypeSelectorEvents } from './events/event-food-type-change';
+// import foodTypes from './enums/enum.food-labels';
 
-var ctx = document.getElementById('bloodsugar');
+var chartBloodSugar = document.getElementById('chart-blood-sugar');
+var chartInsulin = document.getElementById('chart-insulin');
 
-renderChart(ctx, store.normalPerson);
+renderBloodSugarChart(chartBloodSugar, store.normalPerson, store.selectedFood);
+rederInsulinChart(chartInsulin, store.normalPerson, store.selectedFood);
 
 attachPersonSelectorEvents();
 attachFoodTypeSelectorEvents();

@@ -1,0 +1,1 @@
+export const el_fitnessSelector = document.querySelector('.person-fitness-level-controls');
