@@ -1,0 +1,1 @@
+export const el_startSimButton = document.querySelector('.btn-start-sim');

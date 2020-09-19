@@ -6,6 +6,7 @@ import { attachPersonSelectorEvents } from './events/event-person-type-change';
 import { attachFoodTypeSelectorEvents } from './events/event-food-type-change';
 import { attachFitnessTypeSelectorEvents } from './events/event-fitness-type-change';
 import { attachDraggableEvents } from './events/event-droppable';
+import { attachRunSimulationEvent } from './events/event-start-simulation';
 // import foodTypes from './enums/enum.food-labels';
 
 
@@ -21,3 +22,4 @@ attachPersonSelectorEvents();
 attachFoodTypeSelectorEvents();
 attachFitnessTypeSelectorEvents();
 attachDraggableEvents();
+attachRunSimulationEvent();

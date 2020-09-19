@@ -1,0 +1,1 @@
+export const el_controlsBlocks = document.querySelectorAll('.controls-block');

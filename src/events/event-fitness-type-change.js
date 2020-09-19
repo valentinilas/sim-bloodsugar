@@ -15,7 +15,7 @@ export const attachFitnessTypeSelectorEvents = () => {
             store.setFitnessType = false;
         }
 
-        updateBloodSugarChart(store.bloodSugarChart, store.selectedPersonType, store.selectedFood, store.fitnessType);
-        updateInsulinChart(store.insulinChart, store.selectedPersonType, store.selectedFood, store.fitnessType);
+        // updateBloodSugarChart(store.bloodSugarChart, store.selectedPersonType, store.selectedFood, store.fitnessType);
+        // updateInsulinChart(store.insulinChart, store.selectedPersonType, store.selectedFood, store.fitnessType);
     });
 }

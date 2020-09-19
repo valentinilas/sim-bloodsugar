@@ -7,7 +7,7 @@ export const attachFoodTypeSelectorEvents = () => {
     el_foodTypeSelector.addEventListener('change', (e) => {
         let foodType = e.target.getAttribute('data-name');
         store.selectedFood = foodType;
-        updateBloodSugarChart(store.bloodSugarChart, store.selectedPersonType, foodType, store.fitnessType);
-        updateInsulinChart(store.insulinChart, store.selectedPersonType, foodType, store.fitnessType);
+        // updateBloodSugarChart(store.bloodSugarChart, store.selectedPersonType, foodType, store.fitnessType);
+        // updateInsulinChart(store.insulinChart, store.selectedPersonType, foodType, store.fitnessType);
     });
 }

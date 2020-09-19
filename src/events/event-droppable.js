@@ -12,8 +12,8 @@ export const attachDraggableEvents = () => {
     droppable.on('droppable:dropped', (e) => {
         let foodType = e.data.dragEvent.data.originalSource.getAttribute('data-value');
         store.setSelectedFood = foodType;
-        updateBloodSugarChart(store.bloodSugarChart, store.selectedPersonType, store.selectedFood, store.fitnessType);
-        updateInsulinChart(store.insulinChart, store.selectedPersonType, store.selectedFood, store.fitnessType);
+        // updateBloodSugarChart(store.bloodSugarChart, store.selectedPersonType, store.selectedFood, store.fitnessType);
+        // updateInsulinChart(store.insulinChart, store.selectedPersonType, store.selectedFood, store.fitnessType);
     });
     droppable.on('droppable:returned', (e) => {
         console.log(e);

@@ -10,7 +10,7 @@
 <body>
     <div id="app">
         <div class="app-content">
-            <div class="top-controls">
+            <div class="top-controls controls-block">
 
 
                 <div class="person-type-controls">
@@ -50,7 +50,7 @@
                     <canvas id="chart-insulin"></canvas>
                 </div>
             </div>
-            <div id="controls" class="controls">
+            <div id="controls" class="controls controls-block">
                 <div class="controls__foods">
                     <!--  -->
 
@@ -79,24 +79,30 @@
                 </div>
             </div>
         </div>
+        <div class="draggable-controls controls-block">
 
-        <h4>Drag in a food type:</h4>
-        <div class="dropzone-container">
-            <div class="dropzone"></div>
+
+            <h4>Drag in a food type:</h4>
+            <div class="dropzone-container">
+                <div class="dropzone"></div>
+            </div>
+            <div class="foods-container">
+                <div class="dropzone draggable-dropzone--occupied">
+                    <div class="item" data-value="Glucose">Glucose</div>
+                </div>
+                <div class="dropzone draggable-dropzone--occupied">
+                    <div class="item" data-value="Bread">Bread</div>
+                </div>
+                <div class="dropzone draggable-dropzone--occupied">
+                    <div class="item" data-value="Rice">Rice</div>
+                </div>
+                <div class="dropzone draggable-dropzone--occupied">
+                    <div class="item" data-value="Cola">Cola</div>
+                </div>
+            </div>
         </div>
-        <div class="foods-container">
-            <div class="dropzone draggable-dropzone--occupied">
-                <div class="item" data-value="Glucose">Glucose</div>
-            </div>
-            <div class="dropzone draggable-dropzone--occupied">
-                <div class="item" data-value="Bread">Bread</div>
-            </div>
-            <div class="dropzone draggable-dropzone--occupied">
-                <div class="item" data-value="Rice">Rice</div>
-            </div>
-            <div class="dropzone draggable-dropzone--occupied">
-                <div class="item" data-value="Cola">Cola</div>
-            </div>
+        <div class="start-simulation controls-block">
+            <button class="btn-start-sim">Run Simulation</button>
         </div>
 
 
