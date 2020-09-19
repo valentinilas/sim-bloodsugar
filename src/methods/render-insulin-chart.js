@@ -16,6 +16,14 @@ import store from '../store/store';
 export const rederInsulinChart = (ctx, data, foodType) => {
     ctx.style.backgroundColor = '#34434b';
 
+
+    let insulinLevels = data[foodType].map(entry => {
+        return Number((entry * store.insulinModifier).toFixed(2));
+    });
+
+
+
+
     var chart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -30,7 +38,7 @@ export const rederInsulinChart = (ctx, data, foodType) => {
                     // pointRadius: 0,
                 },
                 {
-                    data: data[foodType + insulinTypes.level],
+                    data: insulinLevels,
                     label: insulinTypes.levelLabel,
                     borderColor: chartColors.InsulinLevel,
                     // backgroundColor: chartColors.Rice,

@@ -10,8 +10,8 @@ export const attachPersonSelectorEvents = () => {
         let val = e.target.value;
         console.log(val);
         if (val === personTypes.Normal) {
-            updateBloodSugarChart(store.bloodSugarChart, store.normalPerson, store.selectedFood);
-            updateInsulinChart(store.insulinChart, store.normalPerson, store.selectedFood);
+            updateBloodSugarChart(store.bloodSugarChart, store.normalPerson, store.selectedFood, store.fitnessType);
+            updateInsulinChart(store.insulinChart, store.normalPerson, store.selectedFood, store.fitnessType);
             store.setPersonType = store.normalPerson;
             toggleFitnessControls(true);
             store.setFitnessType = true;
@@ -21,8 +21,8 @@ export const attachPersonSelectorEvents = () => {
             store.setFitnessType = false;
 
 
-            updateBloodSugarChart(store.bloodSugarChart, store.diabeticPerson, store.selectedFood);
-            updateInsulinChart(store.insulinChart, store.diabeticPerson, store.selectedFood);
+            updateBloodSugarChart(store.bloodSugarChart, store.diabeticPerson, store.selectedFood, store.fitnessType);
+            updateInsulinChart(store.insulinChart, store.diabeticPerson, store.selectedFood, store.fitnessType);
             store.setPersonType = store.diabeticPerson;
         }
     });

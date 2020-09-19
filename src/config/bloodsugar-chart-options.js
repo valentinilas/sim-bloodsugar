@@ -1,3 +1,5 @@
+import chartColors from '../enums/enum.chart-colors';
+
 export default {
     responsive: true,
     title: {
@@ -22,10 +24,13 @@ export default {
             ticks: {
                 beginAtZero: true,
                 fontColor: '#fff',
+                stepSize: 5,
+                min: 0,
+                max: 20,
             },
             scaleLabel: {
                 display: true,
-                fontColor: '#fff',
+                fontColor: chartColors.BloodSugarLevel,
                 labelString: 'Blodsukker (mMol/L)'
             }
         }],

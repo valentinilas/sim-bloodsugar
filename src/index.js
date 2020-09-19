@@ -4,6 +4,7 @@ import { rederInsulinChart } from './methods/render-insulin-chart';
 import store from './store/store';
 import { attachPersonSelectorEvents } from './events/event-person-type-change';
 import { attachFoodTypeSelectorEvents } from './events/event-food-type-change';
+import { attachFitnessTypeSelectorEvents } from './events/event-fitness-type-change';
 // import foodTypes from './enums/enum.food-labels';
 
 var chartBloodSugar = document.getElementById('chart-blood-sugar');
@@ -14,3 +15,4 @@ rederInsulinChart(chartInsulin, store.normalPerson, store.selectedFood);
 
 attachPersonSelectorEvents();
 attachFoodTypeSelectorEvents();
+attachFitnessTypeSelectorEvents();

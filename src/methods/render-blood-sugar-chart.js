@@ -23,9 +23,9 @@ export const renderBloodSugarChart = (ctx, data, foodType) => {
             fontColor: "#fff",
             datasets: [{
                     data: data[foodType],
-                    label: foodTypes[foodType],
+                    label: foodTypes[foodType + 'BloodLevel'],
                     borderColor: chartColors[foodType],
-                    // backgroundColor: chartColors.Rice,
+                    backgroundColor: chartColors[foodType],
                     fill: true
                 }
 

@@ -1,3 +1,4 @@
+import chartColors from '../enums/enum.chart-colors';
 export default {
     responsive: true,
     title: {
@@ -22,21 +23,26 @@ export default {
                 id: 'A',
                 ticks: {
                     beginAtZero: true,
-                    fontColor: '#fff',
+                    fontColor: chartColors.BloodSugarLevel,
+                    stepSize: 20,
+                    min: 0,
+                    max: 160,
+                    padding: 15
                 },
                 scaleLabel: {
                     display: true,
-                    fontColor: '#fff',
+                    fontColor: chartColors.BloodSugarLevel,
                     labelString: 'Blodsukker (mMol/L)'
                 }
             },
             {
                 ticks: {
                     beginAtZero: true,
-                    fontColor: '#fff',
-                    stepSize: 30,
+                    fontColor: chartColors.InsulinLevel,
+                    stepSize: 50,
                     min: 0,
-                    max: 100,
+                    max: 150,
+                    padding: 15
                 },
                 gridLines: false,
                 id: 'B',
@@ -44,8 +50,8 @@ export default {
                 position: 'right',
                 scaleLabel: {
                     display: true,
-                    fontColor: '#fff',
-                    labelString: 'Insulin (mMol/L)'
+                    fontColor: chartColors.InsulinLevel,
+                    labelString: 'Insulin (μU/mL)'
                 }
             }
         ],
