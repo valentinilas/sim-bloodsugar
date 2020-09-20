@@ -11,9 +11,15 @@ import { attachRunSimulationEvent } from './events/event-start-simulation';
 
 
 
+
+
+
+
+
 var chartBloodSugar = document.getElementById('chart-blood-sugar');
 var chartInsulin = document.getElementById('chart-insulin');
 
+console.log(store);
 renderBloodSugarChart(chartBloodSugar, store.normalPerson, store.selectedFood);
 rederInsulinChart(chartInsulin, store.normalPerson, store.selectedFood);
 
