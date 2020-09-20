@@ -5,10 +5,16 @@
 @import './charts-container.scss';
 @import './buttons.scss';
 @import './top-controls.scss';
-@import './food-controls.scss';
 @import './droppable-menu.scss';
 @import './start-sim-button.scss';
 @import './disabled-controls';
+@import './droppable-menu-items.scss';
+@import './droppable-menu-blocks.scss';
+@import './droppable-dropzones.scss';
+@import './charts.scss';
+@import './droppable-foods.scss';
+@import './droppable-tests.scss';
+@import './droppable-menu-block-labels.scss';
 #app:focus,
 #app:active {
     border: none !important;

@@ -1,22 +1,54 @@
 import { Droppable } from '@shopify/draggable';
 import store from '../store/store';
-import { updateBloodSugarChart } from '../methods/update-blood-sugar-chart';
-import { updateInsulinChart } from '../methods/update-insulin-chart';
 
-const droppable = new Droppable(document.querySelectorAll('#app'), {
-    draggable: '.item',
-    dropzone: '.dropzone'
-});
+import { setTestTypeOnGraphContainer } from '../methods/set-test-type-on-graph-element';
+import { resetChartData } from '../methods/reset-chart-data';
+
+
 
 export const attachDraggableEvents = () => {
-    droppable.on('droppable:dropped', (e) => {
-        let foodType = e.data.dragEvent.data.originalSource.getAttribute('data-value');
-        store.setSelectedFood = foodType;
-        // updateBloodSugarChart(store.bloodSugarChart, store.selectedPersonType, store.selectedFood, store.fitnessType);
-        // updateInsulinChart(store.insulinChart, store.selectedPersonType, store.selectedFood, store.fitnessType);
+    const droppable = new Droppable(document.querySelectorAll('.draggable-menu__foods, .draggable-menu__tests, .dropzone-container'), {
+        draggable: '.item',
+        dropzone: '.dropzone'
     });
-    droppable.on('droppable:returned', (e) => {
-        console.log(e);
-        console.log('droppable:returned');
+
+    let droppableOrigin;
+
+    droppable.on('drag:start', (evt) => {
+        droppableOrigin = evt.originalSource.parentNode.dataset.dropzone;
     });
+
+    droppable.on('droppable:dropped', (evt) => {
+        if (droppableOrigin !== evt.dropzone.dataset.dropzone) {
+            evt.cancel();
+            return;
+        }
+
+
+        let foodType = evt.data.dragEvent.data.originalSource.getAttribute('data-food');
+        let testType = evt.data.dragEvent.data.originalSource.getAttribute('data-test');
+        if (foodType !== null && foodType !== '') {
+            store.setSelectedFood = foodType;
+            resetChartData();
+        }
+        if (testType !== null && testType !== '') {
+            store.setTestType = testType;
+            resetChartData();
+            setTestTypeOnGraphContainer(testType);
+        }
+
+
+
+
+    });
+
+
+
+
+
+
+    // --- Draggable events --- //
+
+
+
 }

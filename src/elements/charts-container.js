@@ -1,0 +1,1 @@
+export const el_chartsContainer = document.querySelector('.charts');

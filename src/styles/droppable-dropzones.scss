@@ -1,0 +1,52 @@
+.draggable-dropzones {
+    position: absolute;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    top: 20%;
+}
+
+.drop-zone-labels {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1rem;
+}
+
+.dropzone-container {
+    border: 2px dashed #f5f5f5;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 5px;
+    width: 89px;
+    .item {
+        width: 75px;
+        height: 75px;
+        background-color: lightgreen;
+        user-select: none;
+        opacity: 0.5;
+        background-size: 90%;
+        background-position: center center;
+        &:hover {
+            cursor: grab;
+        }
+    }
+    .dropzone {
+        height: 75px;
+        width: 75px;
+    }
+}
+
+.dropzone--food {
+    background-color: #f5f5f5;
+    background-color: #f5f5f5;
+    border: 2px dashed #9F3968;
+}
+
+.dropzone--test {
+    background-color: #f5f5f5;
+    border: 2px dashed #49b2ad;
+}
+
+.draggable-dropzone--occupied {
+    background: lightgreen;
+}

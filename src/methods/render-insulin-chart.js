@@ -30,7 +30,8 @@ export const rederInsulinChart = (ctx, data, foodType) => {
             labels: data.timeScale,
             fontColor: "#fff",
             datasets: [{
-                    data: data[foodType],
+                    // data: data[foodType],
+                    data: [], //initial load
                     label: foodTypes[foodType + 'BloodLevel'],
                     borderColor: chartColors[foodType],
                     backgroundColor: chartColors[foodType],
@@ -39,7 +40,8 @@ export const rederInsulinChart = (ctx, data, foodType) => {
                         // pointRadius: 0,
                 },
                 {
-                    data: insulinLevels,
+                    // data: insulinLevels,
+                    data: [], //initial load
                     label: insulinTypes.levelLabel,
                     borderColor: chartColors.InsulinLevel,
                     backgroundColor: chartColors.InsulinLevel,

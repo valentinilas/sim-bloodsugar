@@ -27,6 +27,8 @@ export const updateBloodSugarChart = (chart, data, foodType, fitnessModifier) =>
             ]
         },
         chart.update();
+
+    // sim
     clearInterval(window.runSimInterval);
     window.runSimInterval = setInterval(runSim, 200);
     toggleControls(false);
@@ -38,7 +40,7 @@ export const updateBloodSugarChart = (chart, data, foodType, fitnessModifier) =>
 
         chart.config.data.datasets[0].data.push(datapoint);
 
-        console.log(dataPoints);
+
         chart.update();
         if (dataPoints.length === chart.config.data.datasets[0].data.length) {
             clearInterval(window.runSimInterval);
@@ -46,6 +48,8 @@ export const updateBloodSugarChart = (chart, data, foodType, fitnessModifier) =>
         }
 
     }
+
+
 
 
 }

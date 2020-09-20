@@ -1,0 +1,16 @@
+.block-label {
+    position: absolute;
+    bottom: calc(100% - 5px);
+    padding: 5px 10px;
+    font-size: 55%;
+    border-radius: 5%;
+    color: #fff;
+}
+
+.draggable-menu__foods .block-label {
+    background-color: #9F3968;
+}
+
+.draggable-menu__tests .block-label {
+    background-color: #49b2ad;
+}

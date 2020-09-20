@@ -3,7 +3,6 @@ import { renderBloodSugarChart } from './methods/render-blood-sugar-chart';
 import { rederInsulinChart } from './methods/render-insulin-chart';
 import store from './store/store';
 import { attachPersonSelectorEvents } from './events/event-person-type-change';
-import { attachFoodTypeSelectorEvents } from './events/event-food-type-change';
 import { attachFitnessTypeSelectorEvents } from './events/event-fitness-type-change';
 import { attachDraggableEvents } from './events/event-droppable';
 import { attachRunSimulationEvent } from './events/event-start-simulation';
@@ -19,7 +18,6 @@ renderBloodSugarChart(chartBloodSugar, store.normalPerson, store.selectedFood);
 rederInsulinChart(chartInsulin, store.normalPerson, store.selectedFood);
 
 attachPersonSelectorEvents();
-attachFoodTypeSelectorEvents();
 attachFitnessTypeSelectorEvents();
 attachDraggableEvents();
 attachRunSimulationEvent();
